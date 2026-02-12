@@ -3,17 +3,16 @@ import { DynamoAPL } from "@saleor/app-sdk/APL/dynamodb";
 import { FileAPL } from "@saleor/app-sdk/APL/file";
 import { UpstashAPL } from "@saleor/app-sdk/APL/upstash";
 import { SaleorApp } from "@saleor/app-sdk/saleor-app";
+
 import { env } from "@/env";
 import { dynamoMainTable } from "@/modules/dynamodb/dynamo-main-table";
-import { RedisAPL } from "./redis-apl";
 
 import { createLogger } from "./logger";
+import { RedisAPL } from "./redis-apl";
 
 const logger = createLogger("saleor-app");
 
 const aplType = env.APL ?? "file";
-logger.debug(aplType)
-
 
 export let apl: APL;
 
@@ -51,7 +50,6 @@ switch (aplType) {
       redisUrl: env.REDIS_URL,
       appApiBaseUrl: env.APP_API_BASE_URL,
     });
-    console.log(apl);
     break;
   }
 
