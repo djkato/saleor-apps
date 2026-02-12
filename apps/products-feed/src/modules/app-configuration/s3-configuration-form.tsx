@@ -33,6 +33,14 @@ export const S3ConfigurationForm = (props: Props) => {
         props.onSubmit(data);
       })}
     >
+      <Input
+        required={false}
+        size={"small"}
+        name={"endpoint"}
+        control={control}
+        label="AWS S3 Bucket compatible endpoint (leave empty for AWS)"
+      />
+
       <Input size={"small"} name={"accessKeyId"} control={control} label="Amazon access key ID" />
 
       <Input

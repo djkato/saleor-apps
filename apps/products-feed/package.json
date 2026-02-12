@@ -7,7 +7,7 @@
     "build": "next build",
     "check-types": "tsc",
     "deploy": "tsx --require dotenv/config ./scripts/deploy.ts",
-    "dev": "NODE_OPTIONS='--inspect' next dev",
+    "dev": "next dev",
     "fetch-schema": "curl https://raw.githubusercontent.com/saleor/saleor/${npm_package_config_saleor_schemaVersion}/saleor/graphql/schema.graphql > graphql/schema.graphql",
     "generate": "graphql-codegen",
     "lint": "eslint .",
@@ -70,7 +70,8 @@
     "usehooks-ts": "catalog:",
     "vite": "catalog:",
     "vitest": "catalog:",
-    "zod": "catalog:"
+    "zod": "catalog:",
+    "ioredis": "5.6.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "catalog:",

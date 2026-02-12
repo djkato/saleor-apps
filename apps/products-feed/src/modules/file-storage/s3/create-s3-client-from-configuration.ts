@@ -6,8 +6,10 @@ export const createS3ClientFromConfiguration = ({
   accessKeyId,
   secretAccessKey,
   region,
+  endpoint,
 }: Exclude<RootConfig["s3"], null>) => {
   return new S3Client({
+    endpoint,
     credentials: {
       accessKeyId: accessKeyId,
       secretAccessKey: secretAccessKey,

@@ -2,6 +2,7 @@ import { withSentryConfig } from "@sentry/nextjs";
 import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   reactStrictMode: true,
   transpilePackages: [
     "@saleor/apps-otel",
@@ -12,7 +13,8 @@ const nextConfig: NextConfig = {
     "@saleor/webhook-utils",
   ],
   experimental: {
-    optimizePackageImports: ["@sentry/nextjs", "@sentry/node"],
+    // outputFileTracingRoot: path.join(process.cwd(), "../../")
+    // optimizePackageImports: ["@sentry/nextjs", "@sentry/node"],
   },
   bundlePagesRouterDependencies: true,
   serverExternalPackages: [

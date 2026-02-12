@@ -11,7 +11,7 @@ export const env = createEnv({
     APL: z.enum(["saleor-cloud", "file", "dynamodb", "upstash"]).default("file"),
     APP_API_BASE_URL: z.string().optional(),
     APP_IFRAME_BASE_URL: z.string().optional(),
-    APP_LOG_LEVEL: z.enum(["fatal", "error", "warn", "info", "debug", "trace"]).default("info"),
+    APP_LOG_LEVEL: z.enum(["fatal", "error", "warn", "info", "debug", "trace"]).default("debug"),
     FILE_APL_PATH: z.string().optional(),
     MANIFEST_APP_ID: z.string().default("saleor.app.product-feed"),
     REST_APL_ENDPOINT: z.string().optional(),
