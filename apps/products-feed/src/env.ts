@@ -8,7 +8,7 @@ export const env = createEnv({
   },
   server: {
     ALLOWED_DOMAIN_PATTERN: z.string().optional(),
-    APL: z.enum(["saleor-cloud", "file", "dynamodb", "upstash"]).default("file"),
+    APL: z.enum(["saleor-cloud", "file", "dynamodb", "upstash", "redis"]).default("file"),
     APP_API_BASE_URL: z.string().optional(),
     APP_IFRAME_BASE_URL: z.string().optional(),
     APP_LOG_LEVEL: z.enum(["fatal", "error", "warn", "info", "debug", "trace"]).default("debug"),
@@ -36,6 +36,7 @@ export const env = createEnv({
     FEED_CACHE_MAX_AGE: z.coerce.number().default(300),
     MAX_PARALLEL_CALLS: z.coerce.number().default(5),
     VARIANTS_PER_PAGE: z.coerce.number().default(50),
+    REDIS_URL: z.string().optional(),
   },
   shared: {
     NODE_ENV: z.enum(["development", "production", "test"]).default("development"),
@@ -74,6 +75,7 @@ export const env = createEnv({
     FEED_CACHE_MAX_AGE: process.env.FEED_CACHE_MAX_AGE,
     MAX_PARALLEL_CALLS: process.env.MAX_PARALLEL_CALLS,
     VARIANTS_PER_PAGE: process.env.VARIANTS_PER_PAGE,
+    REDIS_URL: process.env.REDIS_URL,
   },
   isServer: typeof window === "undefined" || process.env.NODE_ENV === "test",
 });

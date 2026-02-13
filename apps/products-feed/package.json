@@ -60,6 +60,7 @@
     "graphql-tag": "catalog:",
     "handlebars": "^4.7.7",
     "handlebars-helpers": "0.10.0",
+    "ioredis": "5.6.0",
     "jsdom": "catalog:",
     "next": "catalog:",
     "react": "catalog:",
@@ -70,8 +71,7 @@
     "usehooks-ts": "catalog:",
     "vite": "catalog:",
     "vitest": "catalog:",
-    "zod": "catalog:",
-    "ioredis": "5.6.0"
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "catalog:",

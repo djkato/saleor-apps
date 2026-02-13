@@ -53,6 +53,7 @@ export const exampleVariantData: ProductVariant = {
       url: "https://example.eu.saleor.cloud/media/thumbnails/products/saleor-blue-polygon-tee-front_thumbnail_256.png",
     },
     category: {
+      slug: "t-shirts",
       id: "Q2F0ZWdvcnk6Mzk=", // cspell:disable-line
       name: "T-shirts",
       googleCategoryId: "42",

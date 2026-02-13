@@ -1,6 +1,8 @@
 {
   "$schema": "https://turbo.build/schema.v2.json",
-  "extends": ["//"],
+  "extends": [
+    "//"
+  ],
   "tasks": {
     "deploy": {
       "env": [
@@ -26,9 +28,8 @@
         "DYNAMODB_CONNECTION_TIMEOUT_MS",
         "MANIFEST_APP_ID",
         "FILE_APL_PATH",
-        "REDIS_URL",
         "APP_API_BASE_URL",
-        "OTEL_ACCESS_TOKEN"
+        "REDIS_URL"
       ]
     }
   }

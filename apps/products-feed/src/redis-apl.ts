@@ -53,6 +53,7 @@ export class RedisAPL implements APL {
       const data = JSON.parse(res) as AuthData;
 
       logger.debug(data, { depth: null });
+
       return data;
     }
   }
@@ -80,6 +81,7 @@ export class RedisAPL implements APL {
     const ready = !!(await this.client.info());
 
     logger.debug("REDIS: IS READY: ", ready);
+
     return { ready: ready } as AplReadyResult;
   }
 
@@ -87,6 +89,7 @@ export class RedisAPL implements APL {
     const ready = !!(await this.client.info());
 
     logger.debug("REDIS: IS CONF: ", ready);
+
     return { configured: ready } as AplConfiguredResult;
   }
 }
